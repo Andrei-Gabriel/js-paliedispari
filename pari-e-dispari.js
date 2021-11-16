@@ -7,12 +7,12 @@ do{
 }while(1 > utente[1] || utente[1] > 5);
 
 const computer = pcRandom();
-const pariDispari = fpariDispari(...utente);
+const pariDispari = fpariDispari(utente);
 
 if(pariDispari == utente[0]){
-    alert("HAI VINTO. La somma é", utente[0]);
+    alert("HAI VINTO. La somma é" + " " + utente[0]);
 }else{
-    alert("HAI PERSO. La somma é", pariDispari);
+    alert("HAI PERSO. La somma é" + " " + pariDispari);
 }
 
 
@@ -20,8 +20,8 @@ function pcRandom(){
     return Math.floor(Math.random() * 5) + 1;
 }
 
-function fpariDispari(...n, m){
-    if(n[1] + m % 2 == 0){
+function fpariDispari(array, m){
+    if(array[1] + m % 2 == 0){
         return "pari";
     }
     return "dispari";
